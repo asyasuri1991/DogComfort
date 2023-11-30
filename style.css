@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700');
+
+/* ОБЩИЕ СТИЛИ */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ЛЕВАЯ ЧАСТЬ СТРАНИЦЫ */
+
+.page-banner {
+    position: relative;
+}
+
+.page-logo {
+    position: absolute;
+    left: 40px;
+    top: 50px;
+}
+
+/* ПРАВАЯ ЧАСТЬ СТРАНИЦЫ */
+
+.page-content {
+    padding-left: 40px;
+}
+
+.page-content__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* СТИЛИ ФОРМЫ */
+
+/* НАДПИСЬ ВНУТРИ ФОРМ */
+
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: #999999;
+    font-size: 16px;
+    /* padding-left: 20px; */
+}
+
+/* ЗВЕЗДОЧКА REQUIRED */
+
+.star {
+    color: #C1631F;
+    font-size: 14px;
+}
+
+/* ПОЛЕ УБРАТЬ ОБВОДКУ И ОТСТУПЫ */
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* РАСПОЛОЖИТЬ ФОРМЫ В СЕТКУ */
+
+.field {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    /* grid-template-rows: repeat(4, 1fr); */
+    column-gap: 20px;
+    row-gap: 25px;
+    /* margin: 0;
+    padding: 0; */
+}
+
+/* РАСТЯНУТЬ TEXTAREA НА ДВЕ КОЛОНКИ */
+
+.field__box-comment {
+    grid-column: span 2;
+}
+
+/* РАСПОЛОЖИТЬ LABEL И INPUT  */
+
+.field__box {
+    display: grid;
+}
+
+/* СТИЛИ ОКОШКА */
+
+.field__box input {
+    width: 270px;
+    height: 48px;
+    border-radius: 24px;
+    border: #D1D1D1 1px solid;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.field__box input:focus {
+    outline: none;
+    border: #333333 1px solid;
+}
+
+/* СТИЛЬ ДЛЯ ID  */
+
+.field__box input[type="number"] {
+    background-color: #F3F3F3;
+}
+
+/* ОБВОДКА ДЛЯ ОБЯЗАТЕЛЬНЫХ ПОЛЕЙ ВВОДА */
+
+.field__box input:required:focus {
+    border: #E8721D 1px solid;
+    outline: none;
+}
+
+/* СТИЛИ ДЛЯ ПОЛЯ ВВЕДЕНИЯ ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ */
+
+.field__box textarea {
+    border-radius: 24px;
+    border: #D1D1D1 1px solid;
+    resize: none;
+    height: 96px;
+    padding-left: 20px;
+    padding-top: 14px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.field__box-comment:focus {
+    outline: none;
+    border: #333333 1px solid;
+}
+
+/* СТИЛИ ДЛЯ ПОЛЯ ВВЕДЕНИЯ ДАТЫ РОЖДЕНИЯ */
+
+.field__box input[type="date"] {
+    color: #999999;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+/* УБРАТЬ ЗНАЧОК КАЛЕНДАРИКА */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* СТИЛЬ ДЛЯ ЗАГАЛОВКА ПОЛЯ */
+
+.field__label {
+    font-size: 14px;
+    color: #333333;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+/* СТИЛЬ ДЛЯ ГРУППЫ ПЕРЕКЛЮЧАТЕЛЕЙ SWITCH */
+
+.field__group {
+    padding: 8px;
+    border: 1px solid grey;
+    display: flex;
+    box-sizing: border-box;
+    width: 270px;
+    border-radius: 24px;
+    border: #D1D1D1 1px solid;
+}
+
+.radiobox {
+    flex: 1;
+    cursor: pointer;
+}
+
+.radiobox input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.radiobox input[type="radio"]:checked+.radiobox__text {
+    background-color: #E8721D;
+    color: #fff;
+    border-radius: 24px;
+}
+
+.radiobox__text {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    font-size: 14px;
+}
+
+/* СТИЛИ ВТОРОЙ ЧАСТИ ФОРМЫ ВВОДА */
+
+.personal-info__field {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+}
+
+/* РАСПОЛАГАЕМ СЕЛЕКТ НА ДВЕ КОЛОНКИ */
+
+.personal-info__select {
+    grid-column: span 2;
+}
+
+/* РАСПОЛОГАЕМ СОГЛАСИЕ НА ОБРАБОТКУ НА ДВЕ КОЛОНКИ */
+
+.personal-info__checkbox {
+    grid-column: span 2;
+}
+
+/* РАСПОЛАГАЕМ ЗАГОЛОВОК НАД ПОЛЕМ */
+
+.personal-info__field-box {
+    display: grid;
+}
+
+/* СТИЛИ ПОЛЕЙ ВВОДА */
+
+.personal-info__field-box input {
+    width: 270px;
+    height: 48px;
+    border-radius: 24px;
+    border: #D1D1D1 1px solid;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.personal-info__field-box input:focus {
+    border: #E8721D 1px solid;
+    outline: none;
+}
+
+/* СТИЛИ ДЛЯ ОТМЕТКИ СОГЛАСЕН НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ  */
+
+.checkbox__label{
+    position: relative;
+	cursor: pointer;
+}
+.checkbox__label input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(100%);
+}
+.checkbox__label input[type="checkbox"]:checked + .checkbox__text::before{
+    background-color: #E8721D;
+    background-image: url(./images/checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.checkbox__text{
+    display: flex;
+    gap: 10px;
+}
+.checkbox__text::before {
+    content: '';
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid #E8721D; 
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+/* РАСПОЛАГАЕМ КНОПКУ ПО ЦЕНТРУ */
+
+.field__button {
+    display: grid;
+    justify-content: center;
+}
+
+/* СТИЛИ КНОПКИ */
+
+.button-send {
+
+    background-color: #E8721D;
+    width: 280px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    outline: none;
+    border: none;
+}
+
+.button-send__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button-send:hover {
+    background-color: #C1631F;
+    cursor: pointer;
+}
+
+/* СТИЛИ ДЛЯ СЕЛЕКТА */
+
+.select {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    /* убираем браузерную стрелу */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /* задаем свою рамку, фон*/
+    border: #D1D1D1 1px solid;
+    border-radius: 24px;
+    background-color: transparent;
+    /* отступы от рамки к тексту */
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 85px;
+    /* убираем браузерную обводку */
+    outline: none;
+    /* курсор */
+    cursor: pointer;
+    /* вставляем стрелочку */
+    background: url(./images/arrow.svg) no-repeat right;
+    background-position: 99%;
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
+.select:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #C1631F, 0px 0px 5px #C1631F;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::before {
+    /* стрелочка */
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    display: block;
+
+    /* снять клик с треугольника */
+    pointer-events: none;
+}
