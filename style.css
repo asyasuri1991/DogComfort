@@ -388,3 +388,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     /* снять клик с треугольника */
     pointer-events: none;
 }
+option:disabled {
+    color: #999999;
+}
