@@ -389,5 +389,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     pointer-events: none;
 }
 option:disabled {
-    color: #999999;
+    color: #333333;
 }
