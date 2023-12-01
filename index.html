@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DogComfort</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section>
         <div class="container page">
@@ -93,6 +94,7 @@
                                 <label class="field__label" for="select">Район города</label>
                                 <div class="select-wrapper">
                                     <select name="select" id="select" class="select">
+                                        <option value="0" disabled selected>Выберите район</option>
                                         <option value="1">Автозаводский</option>
                                         <option value="2">Канавинский</option>
                                         <option value="3">Ленинский</option>
@@ -112,12 +114,12 @@
                             </div>
 
                         </div>
-
+                    </fieldset>
                         <div class="field__button">
                             <button type="submit" class="button-send"><span
                                     class="button-send__text">Отправить</span></button>
                         </div>
-                    </fieldset>
+
                 </form>
             </div>
         </div>

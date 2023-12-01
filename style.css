@@ -102,6 +102,9 @@ fieldset {
     border: #D1D1D1 1px solid;
     box-sizing: border-box;
     padding-left: 20px;
+    font-size: 16px;
+    color: #333333;
+    font-family: inherit;
 }
 
 .field__box input:focus {
@@ -248,6 +251,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: #D1D1D1 1px solid;
     box-sizing: border-box;
     padding-left: 20px;
+    font-size: 16px;
+    color: #333333;
+    font-family: inherit;
 }
 
 .personal-info__field-box input:focus {
