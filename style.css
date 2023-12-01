@@ -391,3 +391,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 option:disabled {
     color: #333333;
 }
+
+option:checked {
+    color: #333333;
+}
