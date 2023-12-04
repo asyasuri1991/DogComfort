@@ -81,6 +81,10 @@ fieldset {
     padding: 0; */
 }
 
+.field__box:nth-child(2) {
+    grid-column-start: 1;
+}
+
 /* РАСТЯНУТЬ TEXTAREA НА ДВЕ КОЛОНКИ */
 
 .field__box-comment {
@@ -263,10 +267,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* СТИЛИ ДЛЯ ОТМЕТКИ СОГЛАСЕН НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ  */
 
-.checkbox__label{
+.checkbox__label {
     position: relative;
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .checkbox__label input[type="checkbox"] {
     position: absolute;
     width: 1px;
@@ -279,21 +284,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     white-space: nowrap;
     clip-path: inset(100%);
 }
-.checkbox__label input[type="checkbox"]:checked + .checkbox__text::before{
+
+.checkbox__label input[type="checkbox"]:checked+.checkbox__text::before {
     background-color: #E8721D;
     background-image: url(./images/checkmark.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
-.checkbox__text{
+
+.checkbox__text {
     display: flex;
     gap: 10px;
 }
+
 .checkbox__text::before {
     content: '';
     background-color: white;
     border-radius: 4px;
-    border: 2px solid #E8721D; 
+    border: 2px solid #E8721D;
     width: 20px;
     height: 20px;
     box-sizing: border-box;
@@ -388,6 +396,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     /* снять клик с треугольника */
     pointer-events: none;
 }
+
 option:disabled {
     color: #333333;
 }
